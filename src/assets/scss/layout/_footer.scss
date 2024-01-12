@@ -1,0 +1,29 @@
+.gnb {
+  display: flex;
+  box-shadow: 0 rem(-4) rem(4) 0 rgba($gray06, 0.04);
+
+  li {
+    flex: 1;
+  }
+  a {
+    display: block;
+    padding: rem(35) 0 rem(6);
+    font-size: rem(11);
+    font-weight: 500;
+    line-height: rem(16);
+    text-align: center;
+    color: $gray83;
+  }
+
+  @for $i from 1 to 6 {
+    .icon#{$i} {
+      @include bg("Icons_gnb_off#{$i}.svg", center, rem(8));
+      &:hover {
+        @include bg("Icons_gnb_on#{$i}.svg", center, rem(8));
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}

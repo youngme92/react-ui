@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: rem(48);
+  h1 {
+    @include position(left, 50%, top, 50%);
+  }
+}
+.title_menu {
+  @include flex-between;
+  width: 100%;
+}

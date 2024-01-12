@@ -1,0 +1,33 @@
+.btn {
+  &-prev {
+    @include bg("Icons_Back_24.svg", center, null, null, rem(24), auto);
+    width: rem(40);
+    height: rem(40);
+    // background: url(/src/assets/img/Icons_Back_24.svg) no-repeat center;
+  }
+  &-list {
+    @include bg("Icons_List_24.svg", center, null, null, rem(24), auto);
+    width: rem(40);
+    height: rem(40);
+    // background: url(/src/assets/img/Icons_List_24.svg) no-repeat center;
+  }
+  &-cart {
+    position: relative;
+    width: rem(40);
+    height: rem(40);
+    @include bg("Icons_Cart_24.svg", center, null, null, rem(24), auto);
+    // background: url(/src/assets/img/Icons_Cart_24.svg) no-repeat center;
+    span {
+      @include position(right, rem(1), top, rem(4));
+      padding: 0 rem(6);
+      height: rem(16);
+      background-color: $red;
+      color: $white;
+      border-radius: rem(16);
+      font-family: Noto Sans KR;
+      font-size: rem(11);
+      font-weight: 500;
+      line-height: rem(16);
+    }
+  }
+}

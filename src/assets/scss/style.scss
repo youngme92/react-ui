@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+// setting
+@import "setting/vars";
+@import "setting/reset";
+@import "setting/mixin";
+@import "setting/function";
+@import "setting/fonts"; // 폰트 정의
+
+// layout
+
+@import "layout/header"; // header
+@import "layout/footer"; // footer
+@import "layout/guide"; // guide
+
+// components
+
+@import "components/button"; // buttons
+@import "components/tab"; // tab

@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html,
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+html {
+  font-size: 62.5%; // 접근성 때문에 10px 대신 62.5로 표현
+}
+body {
+  font-size: 1rem;
+}
+
+.h1 {
+  font-size: rem(18);
+  font-weight: 500;
+  line-height: rem(29);
+  color: $black06;
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: rem(18);
+  line-height: rem(29);
+  color: $gray1e;
+  &-2 {
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(29);
+  }
+  &-3 {
+    font-weight: 700;
+    font-size: rem(22);
+    line-height: rem(30);
+  }
+}
+
+.h3 {
+  font-weight: 700;
+  font-size: rem(15);
+  line-height: rem(23);
+}

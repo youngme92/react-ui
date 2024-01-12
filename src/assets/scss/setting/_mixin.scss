@@ -1,0 +1,55 @@
+// 가운데 정렬
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 양쪽 정렬
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// 중앙 정렬
+@mixin position-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 상단 고정
+@mixin position-fixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+@mixin position($x, $xvalue, $y: null, $yvalue: null) {
+  position: absolute;
+  #{$x}: $xvalue;
+  #{$y}: $yvalue;
+
+  @if $xvalue == 50% and $yvalue == 50% {
+    transform: translate(-50%, -50%);
+  } @else if $xvalue == 50% {
+    transform: translateX(50%);
+  } @else if $yvalue == 50% {
+    transform: translateY(-50%);
+  }
+}
+// 배경이미지
+@mixin bg(
+  $imgfile,
+  $x: null,
+  $y: null,
+  $bgcolor: null,
+  $width: null,
+  $height: null
+) {
+  background: url(#{$imgurl}#{$imgfile}) no-repeat $x $y $bgcolor;
+  background-size: $width $height;
+}

@@ -1,4 +1,5 @@
-import StyleGuide from "../pages/StyleGuide";
+import HomePage from "@/pages/HomePage";
+// import StyleGuide from "@/pages/StyleGuide";
 import {
   Route,
   createRoutesFromElements,
@@ -8,7 +9,7 @@ import {
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route>
-      <Route path="/" element={<StyleGuide />} />
+      <Route path="/" element={<HomePage />} />
     </Route>
   )
 );

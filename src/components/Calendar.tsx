@@ -1,4 +1,4 @@
-import useCalendar from "../hooks/useCalendar";
+import useCalendar from "@/hooks/useCalendar";
 
 function Calendar() {
   const { daysOfTheWeek, weeks, currentMonth, prevMonth, nextMonth } =

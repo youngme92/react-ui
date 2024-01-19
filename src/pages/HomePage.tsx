@@ -1,39 +1,12 @@
-import ControlledCounter from "@/components/ControlledCounter";
-import Counter from "@/components/Counter";
-import { useState } from "react";
-
-// import RenderPropsList from "@/components/RenderPropsList";
-
-// const data = [
-//   { id: 1, name: "flower", score: 91 },
-//   { id: 2, name: "geoji", score: 100 },
-//   { id: 3, name: "novell", score: 73 },
-//   { id: 4, name: "star", score: 84 },
-// ];
+import Accordion from "@/components/Accordion";
 
 export default function HomePage() {
-  const [value, setValue] = useState(0);
-
-  const onChnage = function (value: number) {
-    if (value > 10 || value < 0) {
-      return;
-    }
-    setValue(value);
-  };
   return (
-    // <RenderPropsList
-    //   dataSource={data}
-    //   renderItem={({ name, score }) => (
-    //     <div>
-    //       <span>{`Name: ${name}, Score: ${score}`}</span>
-    //     </div>
-    //   )}
-    // />
-    // <Counter>
-    //   <Counter.Button countType="minus" />
-    //   <Counter.Input />
-    //   <Counter.Button countType="plus" />
-    // </Counter>
-    <ControlledCounter count={value} onChange={onChnage} />
+    // TODO: value 값은 고유한 값이여야하므로, key로 사용하고 header로 보여줄 값은 children으로 보여줘야한다.
+    <Accordion>
+      <Accordion.Item value="First item1">content1</Accordion.Item>
+      <Accordion.Item value="First item2">content2</Accordion.Item>
+      <Accordion.Item value="First item3">content3</Accordion.Item>
+    </Accordion>
   );
 }

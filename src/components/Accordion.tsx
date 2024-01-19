@@ -3,6 +3,7 @@ import React, { useState, useCallback, createContext, useContext } from "react";
 // 이렇게 하면 코드의 재사용성이 높아진다.
 // 또한, Accordion 컴포넌트를 사용하는 개발자는 Accordion.Item 컴포넌트를 사용할 때
 // Accordion 컴포넌트의 구조를 알 필요가 없다.
+// TODO: value 값은 고유한 값이여야하므로, key로 사용하고 header로 보여줄 값은 children으로 보여줘야한다.
 type AccordionItemProps = {
   value: string;
   children: React.ReactNode;

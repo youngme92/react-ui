@@ -31,3 +31,61 @@
     }
   }
 }
+.button {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  background-color: $black06;
+  color: $white;
+  font-size: rem(13);
+  font-weight: 600;
+  line-height: rem(13);
+  border-radius: rem(7);
+  height: rem(40);
+  padding: rem(8) rem(16);
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &-default {
+    background-color: $black06;
+    color: $white;
+  }
+  &-destructive {
+    background-color: $red;
+    color: $white;
+  }
+  &-secondary {
+    background-color: $graye5;
+    color: $black06;
+  }
+  &-outline {
+    background-color: $white;
+    color: $gray55;
+    border: 1px solid $graya6;
+    &:hover {
+      background-color: $graye5;
+    }
+  }
+  &-link {
+    background-color: $white;
+    color: $gray55;
+    border: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &-ghost {
+    background-color: transparent;
+    color: $gray55;
+    border: none;
+    &:hover {
+      background-color: $graye5;
+    }
+  }
+}

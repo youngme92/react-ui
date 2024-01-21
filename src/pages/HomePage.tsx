@@ -1,24 +1,14 @@
-import AlertDialog from "@/components/AlertDialog"
+import Badge from "@/components/Badge"
 
 export default function HomePage() {
   return (
-    <AlertDialog>
-      <AlertDialog.Trigger>
-        <button>click</button>
-      </AlertDialog.Trigger>
-      <AlertDialog.Content>
-        <AlertDialog.Header>
-          <AlertDialog.Title>Are you absolutely sure?</AlertDialog.Title>
-          <AlertDialog.Description>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </AlertDialog.Description>
-        </AlertDialog.Header>
-        <AlertDialog.Footer>
-          <AlertDialog.Cancel>cancel</AlertDialog.Cancel>
-          <AlertDialog.Action>confirm</AlertDialog.Action>
-        </AlertDialog.Footer>
-      </AlertDialog.Content>
-    </AlertDialog>
+    <div
+      style={{ margin: "auto", position: "absolute", top: "50%", left: "50%" }}
+    >
+      <Badge varient="destructive">destructive</Badge>
+      <Badge varient="default">default</Badge>
+      <Badge varient="secondary">secondary</Badge>
+      <Badge varient="outline">outline</Badge>
+    </div>
   )
 }

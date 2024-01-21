@@ -1,0 +1,37 @@
+.badge {
+  display: inline-block;
+  padding: rem(2) rem(10);
+  align-items: center;
+  border-radius: rem(16);
+  font-family: Noto Sans KR;
+  font-size: rem(12);
+  font-weight: 600;
+  line-height: rem(16);
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:focus {
+    outline: none;
+  }
+  &-default {
+    color: $white;
+    border: 1px solid $black06 transparent;
+    background-color: $black06;
+  }
+  &-secondary {
+    color: $white;
+    border: 1px solid $gray55 transparent;
+    background-color: $gray55;
+  }
+  &-outline {
+    color: $gray55;
+    border: 1px solid $graya6;
+    background-color: $white;
+  }
+  &-destructive {
+    color: $white;
+    border: 1px solid $red transparent;
+    background-color: $red;
+  }
+}

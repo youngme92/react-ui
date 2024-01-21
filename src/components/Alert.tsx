@@ -21,7 +21,12 @@ const setIcon = (varient: AlertVariants | undefined) => {
       return <Info />
   }
 }
-
+/**
+ *
+ * @param varient 값에 따라 아이콘을 변경할수 있다.
+ * @param children children은 alert.Title, alert.Description 사용가능
+ * @returns
+ */
 export default function Alert({ varient, children }: AlertProps) {
   return (
     <div>

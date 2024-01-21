@@ -1,4 +1,4 @@
 /* px to rem  */
 @function rem($px, $base: 10) {
-  @return ($px / $base) * 1rem;
+  @return calc($px / $base) * 1rem;
 }

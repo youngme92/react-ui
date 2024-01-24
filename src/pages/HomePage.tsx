@@ -1,20 +1,26 @@
-import Collapsible from "@/components/Collapsible"
+import Dialog from "@/components/Dialog"
 
 export default function HomePage() {
   return (
     <div
       style={{ margin: "auto", position: "absolute", top: "50%", left: "50%" }}
     >
-      <Collapsible>
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
-          title
-          <Collapsible.Trigger>Click button</Collapsible.Trigger>
-        </div>
-        <Collapsible.Content>Content1</Collapsible.Content>
-        <Collapsible.Content>Content2</Collapsible.Content>
-        <Collapsible.Content>Content3</Collapsible.Content>
-        <Collapsible.Content>Content4</Collapsible.Content>
-      </Collapsible>
+      <Dialog>
+        <Dialog.Trigger>
+          <button>Dialog Open</button>
+        </Dialog.Trigger>
+        <Dialog.Content>
+          <Dialog.Header>
+            <Dialog.Title>Dialog</Dialog.Title>
+            <Dialog.Description>
+              description dialog! click outside to close
+            </Dialog.Description>
+          </Dialog.Header>
+          <Dialog.Footer>
+            <Dialog.Close>Close</Dialog.Close>
+          </Dialog.Footer>
+        </Dialog.Content>
+      </Dialog>
     </div>
   )
 }

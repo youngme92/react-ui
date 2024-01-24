@@ -1,4 +1,64 @@
 .dialog {
+  &-general {
+    &__overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      position: fixed;
+      inset: 0px;
+      animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    &__content {
+      background-color: white;
+      border-radius: rem(6);
+      box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+        hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90vw;
+      max-width: rem(500);
+      max-height: 85vh;
+      padding: 25px;
+      animation: contentShow 1000ms cubic-bezier(0.16, 1, 0.3, 1);
+      &:focus {
+        outline: none;
+      }
+      &__close {
+        position: absolute;
+        border-radius: rem(6);
+        top: 0;
+        right: 0;
+        padding: rem(10);
+        cursor: pointer;
+        &:hover {
+          background-color: $graye5;
+        }
+      }
+    }
+    &__title {
+      margin: 0;
+      color: $black06;
+      font-size: rem(17);
+      font-weight: 500;
+    }
+    &__description {
+      color: $gray83;
+      margin: rem(20) 0;
+      font-size: rem(15);
+      line-height: rem(20);
+    }
+    &__footer {
+      display: flex;
+      justify-content: center;
+      gap: rem(10);
+    }
+    &__close {
+      padding: rem(10) rem(20);
+      color: $gray55;
+      font-size: rem(15);
+      line-height: rem(20);
+    }
+  }
   &-alert {
     &__overlay {
       background-color: rgba(0, 0, 0, 0.4);

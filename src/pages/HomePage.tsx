@@ -1,26 +1,35 @@
-import Dialog from "@/components/Dialog"
+import DropdownMenu from "@/components/DropdownMenu"
 
 export default function HomePage() {
   return (
     <div
       style={{ margin: "auto", position: "absolute", top: "50%", left: "50%" }}
     >
-      <Dialog>
-        <Dialog.Trigger>
-          <button>Dialog Open</button>
-        </Dialog.Trigger>
-        <Dialog.Content>
-          <Dialog.Header>
-            <Dialog.Title>Dialog</Dialog.Title>
-            <Dialog.Description>
-              description dialog! click outside to close
-            </Dialog.Description>
-          </Dialog.Header>
-          <Dialog.Footer>
-            <Dialog.Close>Close</Dialog.Close>
-          </Dialog.Footer>
-        </Dialog.Content>
-      </Dialog>
+      <div style={{ display: "flex" }}>
+        <DropdownMenu>
+          <DropdownMenu.Trigger>DropdownMenu</DropdownMenu.Trigger>
+          <DropdownMenu.Content>
+            <DropdownMenu.Label>DropdownMenu Label</DropdownMenu.Label>
+            <DropdownMenu.Separator />
+            <DropdownMenu.Item>DropdownMenu Item</DropdownMenu.Item>
+            <DropdownMenu.Item>DropdownMenu Item</DropdownMenu.Item>
+            <DropdownMenu.Item>DropdownMenu Item</DropdownMenu.Item>
+            <DropdownMenu.Item>DropdownMenu Item</DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu>
+
+        <DropdownMenu>
+          <DropdownMenu.Trigger>DropdownMenu</DropdownMenu.Trigger>
+          <DropdownMenu.Content>
+            <DropdownMenu.Label>DropdownMenu Label</DropdownMenu.Label>
+            <DropdownMenu.Separator />
+            <DropdownMenu.Item>DropdownMenu Item</DropdownMenu.Item>
+            <DropdownMenu.Item>DropdownMenu Item</DropdownMenu.Item>
+            <DropdownMenu.Item>DropdownMenu Item</DropdownMenu.Item>
+            <DropdownMenu.Item>DropdownMenu Item</DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu>
+      </div>
     </div>
   )
 }

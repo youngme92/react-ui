@@ -1,0 +1,47 @@
+.dropdownMenu {
+  position: relative;
+  &__content {
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    z-index: 500;
+    min-width: rem(220);
+    background-color: $white;
+    border-radius: rem(6);
+    padding: rem(5);
+    box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35),
+      0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+    animation-duration: 400ms;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+  &__label {
+    padding-left: rem(25);
+    font-size: rem(12);
+    line-height: rem(25);
+    font-weight: 600;
+    color: $black06;
+  }
+  &__separator {
+    height: rem(1);
+    background-color: $graye5;
+    margin: rem(5);
+  }
+  &__item {
+    font-size: rem(13);
+    line-height: rem(1);
+    color: $black06;
+    border-radius: rem(3);
+    display: flex;
+    align-items: center;
+    height: rem(25);
+    padding: rem(2) rem(5);
+    position: relative;
+    padding-left: rem(25);
+    user-select: none;
+    outline: none;
+    &:hover {
+      background-color: $graye5;
+    }
+  }
+}

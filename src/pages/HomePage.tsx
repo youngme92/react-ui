@@ -1,23 +1,20 @@
-import { useState } from "react"
-import Checkbox from "@/components/Checkbox"
+import Collapsible from "@/components/Collapsible"
 
 export default function HomePage() {
-  const [checked, setChecked] = useState(true)
-
-  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setChecked(event.target.checked)
-  }
   return (
     <div
       style={{ margin: "auto", position: "absolute", top: "50%", left: "50%" }}
     >
-      <div style={{ display: "flex" }}>
-        <Checkbox id="test" />
-        <label htmlFor="test">test</label>
-      </div>
-      <Checkbox checked={checked} onChange={handleCheckboxChange} />
-      <Checkbox />
-      <Checkbox />
+      <Collapsible>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          title
+          <Collapsible.Trigger>Click button</Collapsible.Trigger>
+        </div>
+        <Collapsible.Content>Content1</Collapsible.Content>
+        <Collapsible.Content>Content2</Collapsible.Content>
+        <Collapsible.Content>Content3</Collapsible.Content>
+        <Collapsible.Content>Content4</Collapsible.Content>
+      </Collapsible>
     </div>
   )
 }

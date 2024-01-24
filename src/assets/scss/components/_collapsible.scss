@@ -1,0 +1,14 @@
+.collapsible {
+  width: rem(300);
+  &__trigger {
+    cursor: pointer;
+  }
+  &__content {
+    background-color: $white;
+    border-radius: rem(4);
+    margin: rem(10) 0;
+    padding: rem(10);
+    border: 1px solid $graye5;
+    padding: rem(10);
+  }
+}

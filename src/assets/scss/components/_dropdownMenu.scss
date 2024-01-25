@@ -1,5 +1,11 @@
 .dropdownMenu {
   position: relative;
+  &__overlay {
+    background-color: transparent;
+    position: fixed;
+    inset: 0px;
+    z-index: 400;
+  }
   &__content {
     position: absolute;
     top: 100%;

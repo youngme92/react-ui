@@ -2,7 +2,6 @@ import React, { useState, useEffect, createContext } from "react"
 
 // TODO: style dropdownMenu 열고 닫을때 animation 기능 추가 하기
 // TODO: data-side 를 어떻게 구현할것인가 -> prop을 받아서 구현하면 될듯
-// TODO: 중복으로 dropdownMenu를 사용할 때, 하나의 dropdownMenu를 닫으면 다른 dropdownMenu 닫기
 
 type ReactNodeProps = {
   children: React.ReactNode
@@ -50,9 +49,13 @@ export default function DropdownMenu({ children }: DropdownMenuProps) {
 
   return (
     <DropdownMenuContext.Provider value={{ isOpen, setIsOpen }}>
+      {isOpen && <Overlay />}
       <div className="dropdownMenu">{children}</div>
     </DropdownMenuContext.Provider>
   )
+}
+function Overlay() {
+  return <div className="dropdownMenu__overlay" />
 }
 /** --------------------------------
  * DropdownMenuTrigger TODO: asChild 구현 하기

@@ -1,5 +1,4 @@
-import Checkbox from "@/components/Checkbox"
-import Label from "@/components/Label"
+import DropdownMenu from "@/components/DropdownMenu"
 
 export default function HomePage() {
   return (
@@ -7,8 +6,50 @@ export default function HomePage() {
       style={{ margin: "auto", position: "absolute", top: "50%", left: "50%" }}
     >
       <div style={{ display: "flex", gap: "5px" }}>
-        <Checkbox id="testId" />
-        <Label htmlFor="testId">test</Label>
+        <DropdownMenu>
+          <DropdownMenu.Trigger>trigger</DropdownMenu.Trigger>
+          <DropdownMenu.Content>
+            <DropdownMenu.Label>label</DropdownMenu.Label>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Separator />
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu>
+        <DropdownMenu>
+          <DropdownMenu.Trigger>trigger</DropdownMenu.Trigger>
+          <DropdownMenu.Content>
+            <DropdownMenu.Label>label</DropdownMenu.Label>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Separator />
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu>
+        <DropdownMenu>
+          <DropdownMenu.Trigger>trigger</DropdownMenu.Trigger>
+          <DropdownMenu.Content>
+            <DropdownMenu.Label>label</DropdownMenu.Label>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Separator />
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu>
+        <DropdownMenu>
+          <DropdownMenu.Trigger>trigger</DropdownMenu.Trigger>
+          <DropdownMenu.Content>
+            <DropdownMenu.Label>label</DropdownMenu.Label>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+            <DropdownMenu.Separator />
+            <DropdownMenu.Item>item</DropdownMenu.Item>
+          </DropdownMenu.Content>
+        </DropdownMenu>
       </div>
     </div>
   )

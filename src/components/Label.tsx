@@ -1,13 +1,16 @@
-import { LabelHTMLAttributes } from "react"
+import React, { LabelHTMLAttributes, ForwardedRef, forwardRef } from "react"
 
 interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   children: React.ReactNode
 }
 
-export default function Label({ children, ...props }: LabelProps) {
+export default forwardRef(function Label(
+  { children, ...props }: LabelProps,
+  ref: ForwardedRef<HTMLLabelElement> | undefined
+) {
   return (
-    <label className="label" {...props}>
+    <label className="label" {...props} ref={ref}>
       {children}
     </label>
   )
-}
+})

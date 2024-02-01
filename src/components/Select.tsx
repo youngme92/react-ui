@@ -1,86 +1,40 @@
-import React from "react";
-// import DropDown from './DropDown';
+import { createContext, useState } from "react"
 
-interface SelectProps {
-  label: string;
-  trigger: React.ReactNode;
-  value: string;
-  onChange: (value: string) => void;
-  options: string[];
+interface SelectProps extends React.SelectHTMLAttributes<HTMLSelectElement> {
+  children: React.ReactNode
 }
 
-export function FrameworkSelect() {
-  const [framework, setFramework] = React.useState("react");
-  const handleChange = (value: string) => {
-    setFramework(value);
-  };
+interface OptionProps extends React.OptionHTMLAttributes<HTMLOptionElement> {
+  children: React.ReactNode
+}
+
+// interface SelectType extends React.ForwardRefExoticComponent<SelectProps> {
+//   Option?: React.ForwardRefExoticComponent<OptionProps>
+// }
+
+type SelectContext = {
+  selectedValue: string
+  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void
+}
+
+const SelectContext = createContext<SelectContext | null>(null)
+
+export const Select = ({ children, ...props }: SelectProps) => {
+  const [selectedValue, setSelectedValue] = useState("")
+  const onChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedValue(event.target.value)
+  }
   return (
-    <Select
-      label="Frontend Framework"
-      trigger={<button>{framework}</button>}
-      value={framework}
-      onChange={handleChange}
-      options={["react", "vue", "angular"]}
-    />
-  );
+    <SelectContext.Provider value={{ selectedValue, onChange }}>
+      <select {...props}>{children}</select>
+    </SelectContext.Provider>
+  )
 }
 
-const Select = ({ label, trigger, value, onChange, options }: SelectProps) => {
-  return (
-    <div>
-      <DropDown label={label} value={value} onChange={onChange}>
-        {/* <DropDown.Trigger as={trigger} /> */}
-        <DropDown.Menu>
-          {options.map((option) => (
-            <DropDown.Item key={option} value={option}>
-              {option}
-            </DropDown.Item>
-          ))}
-        </DropDown.Menu>
-      </DropDown>
-    </div>
-  );
-};
-
-function DropDown({
-  children,
-  label,
-  value,
-  onChange,
-}: {
-  children: React.ReactNode;
-  label: string;
-  value: string;
-  onChange: (value: string) => void;
-}) {
-  return (
-    <div>
-      <label htmlFor="">{label}</label>
-      {children}
-    </div>
-  );
+function Option({ children, ...props }: OptionProps) {
+  return <option {...props}>{children}</option>
 }
 
-function Trigger({ as: Component }: { as: React.ElementType }) {
-  return <Component />;
-}
+Select.Option = Option
 
-function Menu({ children }: { children: React.ReactNode }) {
-  return <div>{children}</div>;
-}
-
-function Item({
-  children,
-  value,
-}: {
-  children: React.ReactNode;
-  value: string;
-}) {
-  return <div>{children}</div>;
-}
-
-DropDown.Trigger = Trigger;
-DropDown.Menu = Menu;
-DropDown.Item = Item;
-
-export default Select;
+export default Select

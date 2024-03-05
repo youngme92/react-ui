@@ -1,17 +1,17 @@
-import { v4 as uuidv4 } from "uuid"
+import { useId } from "react"
 
 interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 export default function Checkbox({ id, ...props }: CheckboxProps) {
-  const uuid = uuidv4()
+  const reactId = useId()
   return (
     <div style={{ display: "inline" }}>
       <input
         type="checkbox"
-        id={id || uuid}
+        id={id || reactId}
         className="input-checkbox"
         {...props}
       />
-      <label htmlFor={id || uuid}></label>
+      <label htmlFor={id || reactId}></label>
     </div>
   )
 }
